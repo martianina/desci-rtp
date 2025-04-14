@@ -5,8 +5,18 @@ import type { NextPage } from 'next'
 import Card from '@/components/Card'
 import Link from '@/components/Link'
 
+// Add Project type
+type Project = {
+  title: string
+  description: string
+  imgSrc?: string
+  href?: string
+  founders?: string
+  asks?: string
+}
+
 const ClaimDsci: NextPage = () => {
-  const [latestProject, setLatestProject] = useState(null)
+  const [latestProject, setLatestProject] = useState<Project | null>(null)
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('rtp-projects') || '[]')
