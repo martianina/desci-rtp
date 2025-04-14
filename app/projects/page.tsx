@@ -3,8 +3,15 @@
 import { useEffect, useState } from 'react'
 import Card from '@/components/Card'
 
+type Project = {
+  title: string
+  description: string
+  imgSrc?: string
+  href?: string
+}
+
 export default function Projects() {
-  const [submittedProjects, setSubmittedProjects] = useState([])
+  const [submittedProjects, setSubmittedProjects] = useState<Project[]>([])
 
   useEffect(() => {
     const stored = localStorage.getItem('rtp-projects')
