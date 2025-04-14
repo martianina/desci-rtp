@@ -22,9 +22,7 @@ export default function Projects() {
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">
         <h1 className="text-3xl font-extrabold">Projects</h1>
-        <p className="text-lg text-gray-500 dark:text-gray-400">
-          Community-registered projects
-        </p>
+        <p className="text-lg text-gray-500 dark:text-gray-400">Community-registered projects</p>
       </div>
       <div className="container py-12">
         <div className="-m-4 flex flex-wrap">

@@ -26,27 +26,27 @@ const ClaimDsci: NextPage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center flex-grow pt-10 px-4">
-      <div className="max-w-2xl w-full text-center mb-8">
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-gray-900 dark:text-white">
+    <div className="flex flex-grow flex-col items-center justify-center px-4 pt-10">
+      <div className="mb-8 w-full max-w-2xl text-center">
+        <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl dark:text-white">
           DeSci RTP
         </h1>
         <p className="mt-4 text-gray-600 dark:text-gray-300">Preview</p>
       </div>
 
       {latestProject ? (
-        <div className="w-full flex justify-center">
-          <div className="max-w-[544px] w-full">
+        <div className="flex w-full justify-center">
+          <div className="w-full max-w-[544px]">
             <Card
               title={latestProject.title}
               description={latestProject.description}
               imgSrc={latestProject.imgSrc}
               href={null}
             />
-            <div className="text-center mt-6">
+            <div className="mt-6 text-center">
               <Link
                 href="/projects"
-                className="inline-block bg-primary-500 text-white px-6 py-3 rounded-md shadow hover:bg-primary-600 dark:hover:bg-primary-400"
+                className="bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 inline-block rounded-md px-6 py-3 text-white shadow"
               >
                 Submit Another Project
               </Link>

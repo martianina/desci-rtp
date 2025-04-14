@@ -12,7 +12,7 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         {/* HERO IMAGE */}
         <div
-          className="w-full h-64 sm:h-80 md:h-96 bg-center bg-cover"
+          className="h-64 w-full bg-cover bg-center sm:h-80 md:h-96"
           style={{
             backgroundImage: "url('/hero.png')",
           }}
@@ -29,22 +29,26 @@ export default function Home({ posts }) {
         </div>
 
         {/* PORTAL OVERVIEW */}
-        <div className="max-w-3xl mx-auto mt-8 text-lg text-gray-700 dark:text-gray-300 space-y-4">
+        <div className="mx-auto mt-8 max-w-3xl space-y-4 text-lg text-gray-700 dark:text-gray-300">
           <p>
-            <strong>DeSci RTP</strong> is a community-built portal for researchers, founders, funders, and policy minds working at the edge of decentralized science.
+            <strong>DeSci RTP</strong> is a community-built portal for researchers, founders,
+            funders, and policy minds working at the edge of decentralized science.
           </p>
           <p>
-            We're building a hub for collaboration, credibility, and opportunity — starting with a local network here in the Research Triangle, and growing outward.
+            We're building a hub for collaboration, credibility, and opportunity — starting with a
+            local network here in the Research Triangle, and growing outward.
           </p>
           <p>
-            DeSci RTP offers contributors, visibility, career paths, and funding navigation by linking science with community and technology in a region known for evidence-based innovation.
+            DeSci RTP offers contributors, visibility, career paths, and funding navigation by
+            linking science with community and technology in a region known for evidence-based
+            innovation.
           </p>
         </div>
 
         {/* FEATURED POSTS SECTION */}
-        <div className="mt-12 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">Featured Research</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="mx-auto mt-12 max-w-5xl">
+          <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl">Featured Research</h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {posts
               .filter((post) => post.tags?.includes('featured'))
               .slice(0, 2)
@@ -52,17 +56,17 @@ export default function Home({ posts }) {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group block rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
+                  className="group block overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
                 >
-                  <div className="aspect-square bg-gray-100 dark:bg-gray-800 overflow-hidden">
+                  <div className="aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800">
                     <img
                       src={post.imgSrc}
                       alt={post.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-200"
+                      className="h-full w-full transform object-cover transition-transform duration-200 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:underline">
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:underline dark:text-white">
                       {post.title}
                     </h3>
                     <p className="mt-2 text-gray-600 dark:text-gray-300">{post.summary}</p>
