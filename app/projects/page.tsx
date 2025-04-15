@@ -1,42 +1,23 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import Card from '@/components/Card'
-
-type Project = {
-  title: string
-  description: string
-  imgSrc?: string
-  href?: string
-}
-
-export default function Projects() {
-  const [submittedProjects, setSubmittedProjects] = useState<Project[]>([])
-
-  useEffect(() => {
-    const stored = localStorage.getItem('rtp-projects')
-    if (stored) setSubmittedProjects(JSON.parse(stored))
-  }, [])
-
+const ProjectsPage = () => {
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700">
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-extrabold">Projects</h1>
-        <p className="text-lg text-gray-500 dark:text-gray-400">Community-registered projects</p>
-      </div>
-      <div className="container py-12">
-        <div className="-m-4 flex flex-wrap">
-          {submittedProjects.map((d, idx) => (
-            <Card
-              key={d.title + idx}
-              title={d.title}
-              description={d.description}
-              imgSrc={d.imgSrc}
-              href={d.href}
-            />
-          ))}
-        </div>
-      </div>
+    <div className="flex flex-col items-center justify-center pt-10 px-4">
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-gray-100">
+    
+      </h1>
+
+      <iframe
+        className="airtable-embed w-full max-w-3xl"
+        src="https://airtable.com/embed/appwBKR6pXs4ZcUI4/shrHLWK0XG40dpAIR"
+        frameBorder="0"
+        width="100%"
+        height="800"
+        style={{ background: 'transparent', border: '1px solid #ccc' }}
+        title="DeSci RTP Project Submission Form"
+      ></iframe>
     </div>
   )
 }
+
+export default ProjectsPage
