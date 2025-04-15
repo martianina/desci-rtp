@@ -47,32 +47,46 @@ export default function Home({ posts }) {
 
         {/* FEATURED POSTS SECTION */}
         <div className="mx-auto mt-12 max-w-5xl">
-          <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl">Featured Research</h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {posts
-              .filter((post) => post.tags?.includes('featured'))
-              .slice(0, 2)
-              .map((post) => (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group block overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
-                >
-                  <div className="aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800">
-                    <img
-                      src={post.imgSrc}
-                      alt={post.title}
-                      className="h-full w-full transform object-cover transition-transform duration-200 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold text-gray-900 group-hover:underline dark:text-white">
-                      {post.title}
-                    </h3>
-                    <p className="mt-2 text-gray-600 dark:text-gray-300">{post.summary}</p>
-                  </div>
-                </Link>
-              ))}
+          <h2 className="mb-6 text-center text-2xl font-bold sm:text-3xl">The Triangle of Innovation</h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 mt-6">
+            <Link
+              href="/blog/rtp-was-a-lab-blockchain-is-the-protocol/rtp-was-a-lab-blockchain-is-the-protocol"
+              className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition block"
+            >
+              <img
+                src="/blog/rtp-was-a-lab-blockchain-is-the-protocol.jpg"
+                alt="RTP Was a Lab. Blockchain Is the Protocol."
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  RTP Was a Lab. Blockchain Is the Protocol.
+                </h3>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">
+                  How a pine forest experiment in North Carolina reshaped global research—and how
+                  blockchain is picking up where it left off.
+                </p>
+              </div>
+            </Link>
+
+            <Link
+              href="/blog/what-desci-and-tradsci-should-know-about-each-other/what-desci-and-tradsci-should-know-about-each-other"
+              className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition block"
+            >
+              <img
+                src="/blog/what-desci-and-tradsci-should-know-about-each-other.jpg"
+                alt="What DeSci and TradSci Should Know About Each Other"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  What DeSci and TradSci Should Know About Each Other
+                </h3>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">
+                  DeSci is not a rebellion—it is a system upgrade. Academia is not obsolete—it is an under-optimized network.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
 
