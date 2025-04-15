@@ -48,7 +48,7 @@ const ClaimDsci: NextPage = () => {
                 href="/projects"
                 className="bg-primary-500 hover:bg-primary-600 dark:hover:bg-primary-400 inline-block rounded-md px-6 py-3 text-white shadow"
               >
-                Submit Another Project
+                Submit
               </Link>
             </div>
           </div>
