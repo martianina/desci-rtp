@@ -89,6 +89,26 @@ export default function Home({ posts }) {
             </Link>
           </div>
         </div>
+        {/* SURVEY CALL TO ACTION */}
+<div className="mx-auto my-12 max-w-3xl rounded-lg border border-gray-300 bg-white p-6 shadow dark:border-gray-700 dark:bg-gray-900">
+  <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-gray-100 mb-4">
+    Help Shape DeSci RTP
+  </h2>
+  <p className="text-gray-700 dark:text-gray-300 mb-6 text-center">
+    We’re mapping the ecosystem, surfacing opportunities, and building a better future for decentralized science in the Triangle—and beyond.
+  </p>
+  <div className="flex justify-center">
+    <a
+      href="https://airtable.com/app5RcQzg3MKW3iWc/pagaVVANnv5YNUMIp/form"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block rounded-md bg-primary-600 px-6 py-3 text-white font-semibold shadow hover:bg-primary-500"
+    >
+      Take the Survey
+    </a>
+  </div>
+</div>
+
 
         {/* BLOG LIST */}
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
